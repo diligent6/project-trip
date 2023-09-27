@@ -1,0 +1,8 @@
+/* 定义全局变量 */
+
+:root{
+    /* 主题色 */
+    --primary-color: #ff9854;
+    /* 线条的颜色 */
+    --line-color: #faf8f9;
+}

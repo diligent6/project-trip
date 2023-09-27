@@ -1,0 +1,23 @@
+/* html{ TODO: 看看之后哪里会用到？要进行合理的分析
+    line-height: 1.2;
+} */
+/* 重置margin 和 padding */
+p,h1,h2,h3,div,ul,li,ol,li,dl{
+    margin: 0;
+    padding: 0;
+}
+
+/* 重置img */
+img{
+    vertical-align: top;
+}
+
+/* 重置a */
+a{
+    text-decoration: none;
+    color: #333;
+}
+/* 重置ul，li */
+ul,li{
+    list-style: none;
+}
