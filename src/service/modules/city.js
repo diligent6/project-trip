@@ -1,12 +1,7 @@
 import yzRequest from '../request'
 
-export function getdata(){
+export function  getAllCities(){
     return yzRequest.get({
-        url:'',
-        params:{},
-        data:{
-            
-        }
-
+        url:"/city/all"
     })
 }

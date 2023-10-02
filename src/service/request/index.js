@@ -10,6 +10,11 @@ class YZRequest {
             timeout
         })
 
+        this.instance.interceptors.response.use((res)=>{
+            return res.data;
+
+        })
+
     }
     //封装具体的方法
     request(config){
@@ -23,10 +28,10 @@ class YZRequest {
     }
 
     get(config){
-        this.request({...config,method:'get'})
+        return this.request({...config,method:'get'})
     }
     post(config){
-        this.request({...config,method:'post'})
+       return  this.request({...config,method:'post'})
     }
 }
 
