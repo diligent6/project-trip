@@ -5,4 +5,18 @@
     --primary-color: #ff9854;
     /* 线条的颜色 */
     --line-color: #faf8f9;
+    --theme-linear-gradient: linear-gradient(90deg, #fa8c1d, #fcaf3f);
+}
+body{
+    font-size: 14px;
+}
+
+/*字体两行显示多余显示省略号*/
+.two-line{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+
 }

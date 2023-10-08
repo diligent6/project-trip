@@ -34,6 +34,11 @@ const router = createRouter({
             path:'/city',
             component:()=>import("@/views/city/city.vue")
         },
+        {
+            name:"houseItemDetail",
+            path:'/houseItemDetail',
+            component:()=>import("@/views/house-item-detail/house-item-detail.vue")
+        },
 
         {
             path:'/:pathMatch(.*)*',

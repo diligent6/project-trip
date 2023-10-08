@@ -1,6 +1,8 @@
 import axios from 'axios'
 
 import { BASE_URL,TIMEOUT } from './config'
+import useMainStore from "@/store/modules/main.js";
+const mainStore = useMainStore()
 class YZRequest {
 
     constructor(baseURL,timeout){
@@ -9,10 +11,20 @@ class YZRequest {
             baseURL,
             timeout
         })
+        this.instance.interceptors.request.use((config)=>{
 
+            mainStore.showLoading = true;
+
+            return config
+        },error => {
+            return error
+        })
         this.instance.interceptors.response.use((res)=>{
+            mainStore.showLoading = false
             return res.data;
 
+        },error => {
+            return error
         })
 
     }
