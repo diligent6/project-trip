@@ -15,3 +15,13 @@ export function getHouseList(page=1){
         }
     })
 }
+
+export function getHouseDetailInfo(houseId){
+    return yzRequest.get({
+        url:'/detail/infos',
+        params:{
+            houseId
+        }
+
+    })
+}

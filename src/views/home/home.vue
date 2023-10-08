@@ -2,12 +2,16 @@
   <div class="home">
     <!-- 1.顶部的nav-bar -->
     <home-nav-bar />
-    <test>
-      <button>按钮</button>
-      <template #jack="scope">
-        <h3 slot="jack">jack {{scope}}</h3>
-      </template>
-    </test>
+<!--    <test>-->
+<!--      <template #coderwhy>-->
+<!--        <h2>6666</h2>-->
+<!--        <button>点我试试</button>-->
+<!--      </template>-->
+<!--      <button>按钮</button>-->
+<!--      <template #jack="scope">-->
+<!--        <h3>jack {{scope}}</h3>-->
+<!--      </template>-->
+<!--    </test>-->
     <!-- 2. banner图部分 -->
     <home-banner/>
     <!-- 3. 城市区域部分 -->

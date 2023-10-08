@@ -6,8 +6,8 @@
 
     <div class="list" >
       <template v-for="item in houseList">
-        <house-item-v9   v-if="item.discoveryContentType===9" :itemData="item.data" @click="itemClick"/>
-        <house-item-v3 v-else :itemData="item.data" @click="itemClick"/>
+        <house-item-v9   v-if="item.discoveryContentType===9" :itemData="item.data" @click="itemClick(item.data.houseId)"/>
+        <house-item-v3 v-else :itemData="item.data" @click="itemClick(item.data.houseId)"/>
       </template>
     </div>
   </div>
@@ -44,9 +44,14 @@ watch(reachBottom,(newValue,oldValue)=>{
 //4.点击进行房屋详情页的跳转
 //如何获取event事件??? 可以点击
 const router = useRouter()
-const itemClick =(event)=>{
-  console.log(event)
-  // router.push("/houseItemDetail")
+const itemClick =(houseId)=>{
+
+  router.push({
+    path:"/houseItemDetail",
+    query:{
+      houseId
+    }
+  })
 }
 
 </script>

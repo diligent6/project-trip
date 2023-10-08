@@ -13,6 +13,7 @@
 <script setup>
 import useMainStore from "@/store/modules/main.js";
 
+
 const mainStore = useMainStore()
 
 const loadingClick = ()=>{

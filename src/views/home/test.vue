@@ -5,6 +5,7 @@
       <h3>我是插槽</h3>
     </slot>
     <slot name="jack" :scope="msg" :age="18"></slot>
+    <slot name="coderwhy"></slot>
   </div>
 
 </template>
