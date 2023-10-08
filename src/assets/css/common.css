@@ -20,3 +20,12 @@ body{
    -webkit-box-orient: vertical;
 
 }
+.icon{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url("../img/detail/icon_check.png") 0 0/100% 100%;
+}
+.icon_check{
+    background-image: url("../img/detail/icon_check.png");
+}

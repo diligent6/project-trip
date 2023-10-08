@@ -50,18 +50,21 @@ for (const item of props.housePics){
   }
 const currentKey = ref()
 //获取当前item的索引
-const activeIndex = (active)=>{
-  if (isNaN(active)) return
-  const item = props.housePics[active]
-  currentKey.value = item.enumPictureCategory
 
-  const arrs = swiperObject[item.enumPictureCategory]
+  const activeIndex = (active)=>{
+    if (isNaN(active)) return
+    const item = props.housePics[active]
+    currentKey.value = item.enumPictureCategory
 
-  return (arrs.findIndex((data)=>{
-    // return data.url===item.url
-    return data ===item
-  }))+1
-}
+    const arrs = swiperObject[item.enumPictureCategory]
+
+    return (arrs.findIndex((data)=>{
+      // return data.url===item.url
+      return data ===item
+    }))+1
+
+  }
+
 
 //对数据进行转换 ！！！
 const getTagName = (name)=>{
