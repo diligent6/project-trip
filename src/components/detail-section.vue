@@ -6,8 +6,10 @@
       <slot name="content"></slot>
 
     <div class="tip-info" v-if="showInfo">
-      <span class="text">{{ tipInfo}}</span>
-      <van-icon name="arrow" />
+      <div class="right">
+        <span class="text">{{ tipInfo}}</span>
+        <van-icon name="arrow" />
+      </div>
     </div>
   </div>
 </template>
@@ -41,13 +43,19 @@ const props = defineProps({
   position: relative;
 }
 .tip-info{
-  color: var(--primary-color);
-  .text{
-    margin-right: 3px;
+  margin-top: 50px;
+  .right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    color: var(--primary-color);
+    .text{
+      margin-right: 3px;
+    }
   }
-  position: absolute;
-  bottom: 0;
-  right: 0;
+
+
 }
 .content{
 

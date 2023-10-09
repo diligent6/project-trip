@@ -41,5 +41,7 @@ import Test from './test.vue'
 </script>
 
 <style lang="less" scoped>
-
+.home{
+  padding-bottom: 60px;
+}
 </style>

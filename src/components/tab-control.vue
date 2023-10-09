@@ -16,15 +16,20 @@ import {ref} from 'vue'
 const props = defineProps({
   itemDatas: {
     type: Array,
-    default: () => ['描述', '设施', '房东', '评论', '周边']
+    default: () => [ '评论', '周边']
   }
 })
 const currentIndex = ref(0);
+const emis = defineEmits(['tabClick'])
 //点击事件
 const itemClick = (index) => {
 
   currentIndex.value = index
+  emis('tabClick',index)
 }
+defineExpose({
+  currentIndex
+})
 </script>
 
 <style lang="less" scoped>

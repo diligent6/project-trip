@@ -36,11 +36,11 @@ export default function useScroll(elRef){
     //组件挂载后 进行监听
     onMounted(()=>{
         //滚动事件监听
-        if (elRef)el=elRef
+        if (elRef)el=elRef.value
         el.addEventListener('scroll',scrollHandler)
     })
    //组件销毁后 停止监听
-    onUnmounted(()=>{
+    onBeforeUnmount(()=>{
         el.removeEventListener('scroll',scrollHandler)
     })
 

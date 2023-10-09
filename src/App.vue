@@ -1,17 +1,17 @@
 <template>
   <div class="app">
-
    <router-view></router-view>
-
     <div class="loading" v-show="mainStore.showLoading" @click="loadingClick">
       <div class="bg">
       </div>
     </div>
+    <tabbar/>
   </div>
 </template>
 
 <script setup>
 import useMainStore from "@/store/modules/main.js";
+import Tabbar from "@/components/tabbar.vue";
 
 
 const mainStore = useMainStore()
