@@ -19,6 +19,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.3.4",
     "less": "^4.2.0",
+    "postcss-px-to-viewport": "^1.1.1",
     "unplugin-vue-components": "^0.25.2",
     "vite": "^4.4.9"
   }

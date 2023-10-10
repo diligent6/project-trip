@@ -1,6 +1,10 @@
 <template>
   <div class="app">
-   <router-view></router-view>
+   <router-view v-slot="prop">
+     <keep-alive include="home">
+       <component :is="prop.Component"></component>
+     </keep-alive>
+   </router-view>
     <div class="loading" v-show="mainStore.showLoading" @click="loadingClick">
       <div class="bg">
       </div>
